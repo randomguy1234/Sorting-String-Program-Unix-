@@ -1,0 +1,51 @@
+echo "Enter a word"
+
+read a
+
+echo "Enter another word"
+
+read b
+
+echo "Enter one more word"
+
+read c
+
+echo "The words in sorted order are:"
+
+if [[ "$a"<"$b" && "$a"<"$c" ]]
+then
+	echo $a
+
+elif [[ "$b"<"$c" && "$b"<"$a" ]]
+then
+	echo $b
+
+else
+	echo $c
+fi
+
+
+if [[ "$b">"$a" && "$b"<"$c" || "$b">"$c" && "$b"<"$a" ]]
+then
+	echo $b
+
+elif [[ "$c">"$a" && "$c"<"$b" || "$c">"$b" && "$c"<"$a" ]]
+then
+	echo $c
+
+else
+	echo $a
+fi
+
+
+if [[ "$c">"$a" && "$c">"$b" ]]
+then
+	echo $c
+
+elif [[ "$a">"$b" && "$a">"$c" ]]
+then
+	echo $a
+	
+else
+	echo $b
+fi	
